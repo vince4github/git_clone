@@ -1,0 +1,16 @@
+---
+dependencies: []
+
+galaxy_info:
+  author: vince4github 
+  description: Install Epel on centos 
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+        - all
+  galaxy_tags:
+    - development
+    - gitclone 
+        

@@ -1,0 +1,26 @@
+
+- git_config:
+    name: "{{item.name}}" 
+    scope: global
+    value: "{{item.value}}"
+  with_items:
+    - {name: http.sslVerify, value: false}
+    - {name: core.symlinks, value: true} 
+    - {name: core.autocrlf, value: false}
+    - {name: core.fscache, value: true}
+    - {name: color.diff, value: auto}
+    - {name: color.status, value: auto}
+    - {name: color.branch, value: auto}
+    - {name: help.format, value: html}
+    - {name: rebase.autosquash, value: true}
+    - {name: filter.lfs.required, value: true}
+    - {name: core.repositoryformatversion, value: 0}
+    - {name: core.filemode, value: false}
+    - {name: core.bare,value: false}
+    - {name: core.logallrefupdates, value: true}
+    - {name: core.ignorecase, value: true}
+    - {name: log.decorate,value: short}
+
+- git:
+    repo: "https://gitlab-ci-token:{{git_token}}@{{git_repo}}"
+    dest: "{{git_dest}}"
